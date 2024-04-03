@@ -38,3 +38,45 @@ using Github Actions (Continuous Integration).
   - If you were running it on an AWS instance or on a non default port you would enter `Elastic-ip:port`.
 
 ## Part 2 - Github Actions and Dockerhub
+
+- How to create a public repo in Dockerhub
+  - Using the account created when installing Docker desktop, go to the repositories section on hub.docker.com and
+    click create repository.
+    - Give the repository a title and description and click create.
+
+- How to authenticate with Dockerhub via CLI
+  - To login to Dockerhub use the command `docker login -u USERNAME -p PASSWORD`.
+    - It is recommended to use a token instead of a password. You can generate a token using the account section
+      of Dockerhub.
+
+- How to push an image to Dockerhub
+  - Assuming you have logged into Dockerhub on the CLI and have an image built, you can push the image to Dockerhub 
+    by running `docker push USERNAME/IMAGE_NAME:TAG`.
+
+- My Dockerhub repository
+  - [Link](https://hub.docker.com/repository/docker/angrynerd2103/nginx-test/general)
+
+- Configuring Github Secrets
+  - How to create a Github secret
+    - Go to your repository.
+    - Click into the settings tab -> Secrets and Variables -> actions -> repository secrets.
+    - Click add new repository secret and add it.
+ - What secrets are in use for this project
+   - DOCKER_USERNAME
+   - DOCKER_TOKEN
+
+- Behavior of Github actions
+  - What does it do an when
+    - The action for this project is docker build push.
+    - It starts by setting up the environment.
+    - Next it logs into Dockerhub.
+    - Finally it builds and pushes the docker image.
+  - Important variables for this action
+    - Branch
+    - Username
+    - password
+    - tags
+    - Each of these will need to be modified to fit the values used by the specific person and project.
+
+## Part 3 - Diagram
+[Project Overview](#Project-Overview)
