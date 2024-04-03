@@ -7,6 +7,9 @@ The application that will be used is the webserver software nginx along with a d
 Once the application has been successully containerize, the goal is to automate that project pipline 
 using Github Actions (Continuous Integration).
 
+This diagram demonstrates the flow from local system all the way to Dockerhub.
+![Diagram](CI-Diagram.jpeg)
+
 ## Part 1 - Dockerize It
 
 - How to install Docker + Dependencies
