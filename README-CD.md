@@ -30,7 +30,7 @@ The goal for this project is to:
 
 ## Part 2 Deployment
 
-- Installing Docker on your instance
+#### Installing Docker on your instance
   - To install docker on an ubuntu AWS instance Docker's documentation says to do this.
   - First run these commands in order
     ```
@@ -54,7 +54,7 @@ The goal for this project is to:
     - This command is what installs Docker and its components from apt.
   - Now Docker should be running. You can test it with `systemctl` or Docker's own `hello-world` container.
 
-- Setting up a container restart script
+#### Setting up a container restart script
   - [script](deployment/deploy.sh)
   - This script starts by killing and removing the desired container.
   - Next it pulls a fresh image from dockerhub.
@@ -62,7 +62,7 @@ The goal for this project is to:
   - For my setup this script is place in `/home/ubuntu/deploy.sh` however as long as you modify hooks.json you can store the 
     script where ever you prefer.
 
-- Installing and setting up Adnanh's Webhook
+#### Installing and setting up Adnanh's Webhook
   - On ubuntu to install webhook, all you need to do is run `sudo apt install webhook`.
     - If webhook was not in `apt` you would need to build it from source.
   - Next you need to create a `hooks.json` file. The location does not matter as it is specified later.
