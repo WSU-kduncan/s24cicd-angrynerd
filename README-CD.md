@@ -6,6 +6,9 @@ The goal for this project is to:
   - Implement semantic versioning into the github workflow via `git tag`.
   - Utilize `webhooks` to automatically deploy new container images on an AWS instance.
 
+This diagram demostrates how all the pieces fit together for Continuous Integration and Development.
+![Diagram](CD-Diagram.jpg)
+
 ## Part 1 Semantic Versioning
 
 - How to create a `git tag`
